@@ -6,6 +6,12 @@
       apt:
         name: ["nodejs", "npm"]
         state: present
+    - name: Install N
+      npm:
+        name: n
+        global: yes
+    - name: Install correct version of node
+      shell: n 16
     - name: Install AngularCli
       npm:
         name: "@angular/cli"
