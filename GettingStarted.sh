@@ -13,3 +13,5 @@ ansible-playbook node.yml -K -v
 
 git config --global user.email "agratobgs@gmail.com"
 git config --global user.name "Fawkes"
+git set remote origin git@github.com:erickgs2/linsetup.git
+
