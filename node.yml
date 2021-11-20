@@ -1,0 +1,12 @@
+
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Install nodejs and npm
+      apt:
+        name: ["nodejs", "npm"]
+        state: present
+    - name: Install AngularCli
+      npm:
+        name: "@angular/cli"
+        global: yes
