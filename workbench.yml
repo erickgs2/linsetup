@@ -1,0 +1,6 @@
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Install Workbenck
+      community.general.snap:
+       name: mysql-workbench-community
