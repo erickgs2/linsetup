@@ -10,9 +10,9 @@ ansible-galaxy collection install community.general
 sudo apt install mysql-server --yes
 sudo mysql_secure_installation
 
-ansible-playbook ssh-key-installer.yml -K --ask-vault-pass -v
-ansible-playbook vsCode.yml -K -v
-ansible-playbook node.yml -K -v
+sudo ansible-playbook ssh-key-installer.yml -K --ask-vault-pass -v
+sudo ansible-playbook vsCode.yml -K -v
+sudo ansible-playbook node.yml -K -v
 #ansible-playbook workbench.yml -K -v
 
 sudo git config --global user.email "agratobgs@gmail.com"
