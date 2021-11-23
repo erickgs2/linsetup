@@ -15,7 +15,7 @@ ansible-playbook vsCode.yml -K -v
 ansible-playbook node.yml -K -v
 #ansible-playbook workbench.yml -K -v
 
-git config --global user.email "agratobgs@gmail.com"
-git config --global user.name "Fawkes"
-git remote set-url origin git@github.com:erickgs2/linsetup.git
-git remote set-url origin git@github.com:erickgs2/Lerma.git
+sudo git config --global user.email "agratobgs@gmail.com"
+sudo git config --global user.name "Fawkes"
+sudo git remote set-url origin git@github.com:erickgs2/linsetup.git
+sudo git remote set-url origin git@github.com:erickgs2/Lerma.git
