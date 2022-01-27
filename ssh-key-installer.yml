@@ -1,10 +1,10 @@
 - hosts: localhost
   become: true
   vars:
-    source_key: "./.ssh/id_rsa"
-    source_pub_key: "./.ssh/id_rsa.pub"
-    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
-    pub_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
+    source_key: "./.ssh/id_rsa2"
+    source_pub_key: "./.ssh/id_rsa2.pub"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa2"
+    pub_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa2.pub"
   tasks:
     - name: Ensure .ssh directory exists.
       file:
@@ -28,4 +28,4 @@
       authorized_key:
        user: "{{ lookup('env', 'USER') }}"
        state: present
-       key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+       key: "{{ lookup('file', '~/.ssh/id_rsa2.pub') }}"
