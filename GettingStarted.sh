@@ -10,8 +10,8 @@ sudo apt install snapd
 sudo snap install code --classic
 
 #-----INSTALL MYSQL-----
-#sudo apt install mysql-server --yes
-#sudo mysql_secure_installation
+sudo apt install mysql-server --yes
+sudo mysql_secure_installation
 
 #-----SET UP GITHUB SSH-----
 sudo ansible-playbook ssh-key-installer.yml -K --ask-vault-pass -v
@@ -25,13 +25,13 @@ sudo git config --global user.name "Fawkes"
 #sudo git remote set-url origin git@github.com:erickgs2/Lerma.git
 
 #-----INSTALL DOCKER----
-sudo apt-get update
-sudu apt-get upgrade
-sudo apt install docker.io --yes
-sudo systemctl start docker
-sudo systemctl enable docker 
-sudo systemctl status docker 
-sudo apt install docker-compose --yes
-sudo groupadd docker 
-sudo gpasswd -a ${USER} docker 
-su - $USER
+#sudo apt-get update
+#sudu apt-get upgrade
+#sudo apt install docker.io --yes
+#sudo systemctl start docker
+#sudo systemctl enable docker 
+#sudo systemctl status docker 
+#sudo apt install docker-compose --yes
+#sudo groupadd docker 
+#sudo gpasswd -a ${USER} docker 
+#su - $USER
