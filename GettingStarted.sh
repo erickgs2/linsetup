@@ -10,17 +10,17 @@ sudo apt install snapd
 sudo snap install code --classic
 
 #-----INSTALL MYSQL-----
-sudo apt install mysql-server --yes
-sudo mysql_secure_installation
+#sudo apt install mysql-server --yes
+#sudo mysql_secure_installation
 
 #-----SET UP GITHUB SSH-----
-sudo ansible-playbook ssh-key-installer.yml -K --ask-vault-pass -v
+#sudo ansible-playbook ssh-key-installer.yml -K --ask-vault-pass -v
 #-----INSTALL NODE-----
 sudo ansible-playbook node.yml -K -v
 
 #-----GIT CONFIGURATION-----
-sudo git config --global user.email "agratobgs@gmail.com"
-sudo git config --global user.name "Fawkes"
+#sudo git config --global user.email "agratobgs@gmail.com"
+#sudo git config --global user.name "Fawkes"
 #sudo git remote set-url origin git@github.com:erickgs2/linsetup.git
 #sudo git remote set-url origin git@github.com:erickgs2/Lerma.git
 
