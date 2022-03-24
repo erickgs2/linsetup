@@ -10,13 +10,17 @@ sudo apt install snapd
 sudo snap install code --classic
 
 #-----INSTALL MYSQL-----
-#sudo apt install mysql-server --yes
-#sudo mysql_secure_installation
+sudo apt install mysql-server --yes
+sudo mysql_secure_installation
 
 #-----SET UP GITHUB SSH-----
 #sudo ansible-playbook ssh-key-installer.yml -K --ask-vault-pass -v
 #-----INSTALL NODE-----
-sudo ansible-playbook node.yml -K -v
+#sudo ansible-playbook node.yml -K -v
+sudo apt install npm --yes
+sudo npm uninstall node
+sudo npm install node@v8.5.0
+sudo npm intsall @angular/cli@10.1.4
 
 #-----GIT CONFIGURATION-----
 #sudo git config --global user.email "agratobgs@gmail.com"
