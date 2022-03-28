@@ -18,6 +18,7 @@ sudo mysql_secure_installation
 #-----INSTALL NODE-----
 #sudo ansible-playbook node.yml -K -v
 sudo apt install npm --yes
+sudo npm -g update
 sudo npm i -g n --yes
 sudo stable n
 
