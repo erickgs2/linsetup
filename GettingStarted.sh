@@ -24,3 +24,16 @@ sudo npm i -g @angular/cli --yes
 #-----GIT CONFIGURATION-----
 sudo git config --global user.email "agratobgs@gmail.com"
 sudo git config --global user.name "Fawkes"
+
+#-----INIT COMMANDS LERMA MYSQL-----
+CREATE USER 'codeusr'@'localhost' IDENTIFIED BY 'Flat001298';
+CREATE USER 'codeusr'@'%' IDENTIFIED BY 'Flat001298';
+ALTER USER 'codeusr'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Flat001298';
+ALTER USER 'codeusr'@'%' IDENTIFIED WITH mysql_native_password BY 'Flat001298';
+GRANT ALL ON *.* TO 'codeusr'@'localhost';
+GRANT ALL ON *.* TO 'codeusr'@'%';
+flush privileges;
+
+# IMPORT DATA FORM A SQL FILE ON MYSQL -----
+sudo mysql -u codeusr -p < Dump20220424.sql
+

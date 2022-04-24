@@ -1,7 +1,0 @@
-- hosts: localhost
-  become: true
-  tasks:
-    - name: Install vsCode
-      community.general.snap:
-       name: code 
-       classic: yes
