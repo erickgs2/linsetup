@@ -21,6 +21,9 @@ sudo n install 14.15
 #-----INSTALL ANGULAR-----
 sudo npm i -g @angular/cli --yes
 
+#-----GIVING ACCESS TO THE DEFAULT USER TO THE LERMA PATH-----
+sudo chown -R mint:www-data /Desktop/Lerma
+
 #-----GIT CONFIGURATION-----
 sudo git config --global user.email "agratobgs@gmail.com"
 sudo git config --global user.name "Fawkes"
