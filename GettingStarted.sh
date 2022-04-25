@@ -16,7 +16,7 @@ sudo mysql_secure_installation
 sudo apt install npm --yes
 sudo npm -g update
 sudo npm i -g n --yes
-sudo n install 12.20
+sudo n install 14.15
 
 #-----INSTALL ANGULAR-----
 sudo npm i -g @angular/cli --yes
